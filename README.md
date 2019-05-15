@@ -21,9 +21,12 @@ I decided to create a mini project, reduced to the absolute minimum to recreate 
 ## How to reproduce using this project
 
 * Clone the project.
-* Open in UE4 and check the blueprint: it comes with a SMC_test object set as default scene component with the Engine "Cone" static mesh
+* Open uproject file in UE4 - let build ennvironment create missing data
+* Check the blueprint: it comes with a SMC_test object set as default scene component with the Engine "Cone" static mesh
 * Verify, that mesh is present
 * Close the UE4 Editor to avoid hot reload at all
+* Via context menu on uproject file: "Generate Visual Studio Project Files"
+* Open the created .sln file
 * In SMC_test.cpp: Change the value of the test variable from 5000 to another value. Keep the workaround code disabled.
 * Compile from Visual Studio
 * Reopen the UE4 Editor and check: the mesh will be gone and the new value of the variable should be updated, proving that the new compiled code has been used.
